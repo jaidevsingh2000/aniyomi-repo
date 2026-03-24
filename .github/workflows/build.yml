@@ -26,8 +26,8 @@ jobs:
       - name: Install Gradle
         run: sudo apt-get update && sudo apt-get install -y gradle
 
-      - name: Build APK
-        run: gradle assembleRelease
+      - name: Build Toonstream APK
+        run: gradle :toonstream:assembleRelease
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
